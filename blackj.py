@@ -95,6 +95,7 @@ def oyun():
                     print("Double yapmak için yeterli bakiyeniz yok! Lütfen başka bir seçenek seçin.")
                     continue  # Double yapılacaksa seçenek yeniden gösterilecek
                 oyuncu_bakiye -= katilim_ucreti  # Katılım ücretini iki katına çıkarıyoruz
+                katilim_ucreti=katilim_ucreti*2
                 print("Double seçildi! Sadece bir kart çekebilirsiniz.")
                 time.sleep(1)
 
