@@ -125,12 +125,13 @@ def oyun():
             kazanan = "Kurpiyer"
         elif kurpiye_toplam == oyuncu_toplam:
             print("Berabere!")
+            oyuncu_bakiye += katilim_ucreti
             kazanan = "Berabere"
-        elif oyuncu_toplam == 21:
-            print("Oyuncu BlackJack yaptı, kazandı!")
-            oyuncu_bakiye += katilim_ucreti * 1.5  # Kazanan oyuncuya ödül eklenir
+        elif oyuncu_toplam == 21 and len(oyuncunun_kartlari) == 2:
+            print("Oyuncu BlackJack yaptı, kazandı!")    
+            oyuncu_bakiye += katilim_ucreti * 2.5  # Kazanan oyuncuya ödül eklenir
             kazanan = "Oyuncu"
-        elif kurpiye_toplam == 21:
+        elif kurpiye_toplam == 21 and len(kurpiye_kartlari)==2:
             print("Kurpiyer BlackJack yaptı, kazandı!")
             kazanan = "Kurpiyer"
         elif oyuncu_toplam <= 21 and kurpiye_toplam > 21:
